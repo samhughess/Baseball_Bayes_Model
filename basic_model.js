@@ -1,5 +1,9 @@
+//Basic hierarchical Bayesian model for learning the pitcher decision process
+//This model does NOT consider conditional dependence (it treats every factor as individual)
+//Includes update for observations during the game
 var pitchTypes = ['Fastball', 'Curveball', 'Changeup', 'Slider'];
 
+//Initial Data is used for constructing the prior
 var initialData = [
   {pitcherId: 'P1', lastPitch: 'Fastball', balls: 0, strikes: 1, batterHand: 'R', pitch: 'Curveball'},
   {pitcherId: 'P1', lastPitch: 'Curveball', balls: 1, strikes: 1, batterHand: 'L', pitch: 'Fastball'},
@@ -7,7 +11,7 @@ var initialData = [
   {pitcherId: 'P2', lastPitch: 'Slider', balls: 1, strikes: 0, batterHand: 'R', pitch: 'Changeup'}
 ];
 
-// New data to include in the second inference step
+//New data will be used for update steps
 var newData = [
   {pitcherId: 'P1', lastPitch: 'Curveball', balls: 0, strikes: 2, batterHand: 'R', pitch: 'Changeup'},
   {pitcherId: 'P1', lastPitch: 'Changeup', balls: 2, strikes: 1, batterHand: 'L', pitch: 'Slider'},
