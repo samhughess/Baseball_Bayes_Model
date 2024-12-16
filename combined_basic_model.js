@@ -234,8 +234,8 @@ var getSequenceEffect = function(lastPitch) {
 
 var getHandednessEffect = function(batterHand) {
     return batterHand === 'R'
-        ? [4, 2, 2, 2]  // vs right-handed batters
-        : [2, 2, 3, 3]; // vs left-handed batters
+        ? [2, 2, 2, 4]  // vs right-handed batters
+        : [4, 2, 2, 2]; // vs left-handed batters
 };
 
 var getCountEffect = function(balls, strikes) {
@@ -343,19 +343,21 @@ var testScenarios = [
     {pitcherId: 'P1', lastPitch: 'Slider', balls: 0, strikes: 2, batterHand: 'R'}
 ];
 
+var actualPitches = ['Fastball', 'Slider', 'Slider', 'Fastball', 'Fastball',
+    'Slider', 'Fastball', 'Fastball', 'Fastball', 'Slider'];
 
 // Make prediction
 map(function(scenario, index) {
     var prediction = predictNextPitch(scenario, mockLearnedParams);
 
-    print("=== Scenario " + (index) + " ===");
+    print("=== Scenario " + " ===");
     print("Pitcher: " + scenario.pitcherId);
     print("Last Pitch: " + scenario.lastPitch);
     print("Count: " + scenario.balls + "-" + scenario.strikes);
     print("Batter: " + scenario.batterHand + "\n");
 
-    print("Predicted next pitch: " + prediction.pitch);
-    print("Confidence: " + (prediction.probability * 100).toFixed(1) + "%\n");
+    //print("Predicted next pitch: " + prediction.pitch);
+    //print("Confidence: " + (prediction.probability * 100).toFixed(1) + "%\n");
 
     print("Final probabilities:");
     map(function(i) {
