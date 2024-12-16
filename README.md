@@ -5,4 +5,5 @@ Models for learning weights:
   - hierarchical_model.js: updates the baseline model to include a hierarchical structure but does not include dependence learning
 
 Models for predicting pitches:
-  - basic_prediction_model: pitch prediction without conditional dependence structure
+  - basic_prediction_model: pitch prediction without conditional dependence structure, uses example data
+  - integrated_learn_and_predict_basic_model: combines the learning and prediction basic models
