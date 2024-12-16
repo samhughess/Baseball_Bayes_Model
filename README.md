@@ -7,3 +7,4 @@ Models for learning weights:
 Models for predicting pitches:
   - basic_prediction_model: pitch prediction without conditional dependence structure, uses example data
   - integrated_learn_and_predict_basic_model: combines the learning and prediction basic models
+  - combined_conditional_model.js: combines the learning and prediction conditional models
