@@ -344,7 +344,7 @@ var testScenarios = [
 ];
 
 
-// Make prediction 
+// Make prediction
 map(function(scenario, index) {
     var prediction = predictNextPitch(scenario, mockLearnedParams);
 
