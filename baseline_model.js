@@ -1,6 +1,7 @@
+//Baseline model (no hierarchical structure, no conditional dependence)
 var pitchTypes = ['Fastball', 'Curveball', 'Changeup', 'Slider'];
 
-// Original observations
+// Example original observations
 var initialData = [
     {pitcherId: 'P1', lastPitch: 'Fastball', balls: 0, strikes: 1, batterHand: 'R', pitch: 'Curveball'},
     {pitcherId: 'P1', lastPitch: 'Curveball', balls: 1, strikes: 1, batterHand: 'L', pitch: 'Fastball'},
