@@ -350,7 +350,7 @@ var actualPitches = ['Fastball', 'Slider', 'Slider', 'Fastball', 'Fastball',
 map(function(scenario, index) {
     var prediction = predictNextPitch(scenario, mockLearnedParams);
 
-    print("=== Scenario " + " ==="); 
+    print("=== Scenario " + " ===");
     print("Pitcher: " + scenario.pitcherId);
     print("Last Pitch: " + scenario.lastPitch);
     print("Count: " + scenario.balls + "-" + scenario.strikes);
